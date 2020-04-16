@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>360&deg; Image</title>
+  <meta name="description" content="360&deg; Image - A-Frame">
+  <script src="aframe/aframe-master.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets  id="hdr" crossorigin="anonymous"
+    src="https://cdn.glitch.com/a1717f03-0983-4acb-92ff-7955350e4b5d%2Fspheric.jpeg?v=1586510835193" >
+
+  <!--  <img id="hdr" src="images/spheric.jpg"> -->
+  </a-assets>
+    <a-sky src="#hdr" rotation="0 -130 0"></a-sky>
+
+    <a-text font="kelsonsans" value="Off-line Shop" width="6" position="-2.5 0.25 -1.5" rotation="0 90 0"></a-text>
+  </a-scene>
+</body>
+
+</html>
