@@ -11,14 +11,51 @@
 <body>
   <a-scene>
     <a-assets  id="hdr" crossorigin="anonymous"
-    src="https://cdn.glitch.com/a1717f03-0983-4acb-92ff-7955350e4b5d%2Fspheric.jpeg?v=1586510835193" >
-
-  <!--  <img id="hdr" src="images/spheric.jpg"> -->
-  </a-assets>
+      src="images/spheric.jpg" >
+          <!--  <img id="hdr" src="https://cdn.glitch.com/a1717f03-0983-4acb-92ff-7955350e4b5d%2Fspheric.jpeg?v=1586510835193"> -->
+          <!--  <img id="hdr" src="images/spheric.jpg"> -->
+    </a-assets>
+    
+    <a-assets id="texture" 
+              src="https://raw.githubusercontent.com/landev74/hotspot_demo/master/images/bricks.jpg">
+    </a-assets>
+    
+    <a-assets id="vidtexture" 
+              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4">
+    </a-assets>
+    
+     <a-assets id="vidlocal" autoplay loop="true" 
+               src="videos/abloh.mp4">
+    </a-assets>
+    
     <a-sky src="#hdr" rotation="0 -130 0"></a-sky>
-    <a-box color="green" ></a-box>
+    
+    <a-box  src="#texture" 
+           position="0 0 -11"
+           animation="property: position; 
+                      to: 1 8 -10; dur: 2000; 
+                      easing: linear; 
+                      loop: true"
+            animation__2="property: rotation; 
+                          to: 0 360 0; 
+                          dur: 1000; 
+                          easing: linear; 
+                          loop: true"
+            animation__3="property: scale; 
+                          to: 2 2 2; 
+                          dur: 2000; 
+                          easing: linear">
+    </a-box>
 
-    <a-text font="kelsonsans" value="Off-line Shop" width="6" position="-2.5 0.25 -1.5" rotation="0 90 0"></a-text>
+    <a-text font="kelsonsans" 
+            value="Off-line Shop" 
+            width="6" 
+            position="-2.5 0.25 -1.5" 
+            rotation="0 90 0">
+    </a-text>
+    
+    <a-plane src="#vid" position="-15 0 -15" width="16" height="9"></a-plane>
+    
   </a-scene>
 </body>
 
