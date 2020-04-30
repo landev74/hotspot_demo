@@ -23,6 +23,10 @@
               src="https://raw.githubusercontent.com/landev74/hotspot_demo/master/images/bricks.jpg">
     </a-assets>
     
+     <a-assets id="normalTexture" 
+              src="https://github.com/landev74/hotspot_demo/blob/master/images/bricks-NRM.jpg">
+    </a-assets>
+    
     <a-assets id="vidtexture" 
               src="https://download-a.akamaihd.net/files/media_periodical/01/jwbcov_I_201905_23_r720P.mp4">
     </a-assets>
@@ -34,6 +38,7 @@
     <a-sky src="#hdr" rotation="0 -130 0"></a-sky>
     
     <a-box  src="#texture" 
+           normal-map="#normalTexture";
            position="0 0 -11"
            animation="property: position; 
                       to: 1 8 -10; dur: 2000; 
