@@ -19,13 +19,18 @@
           <!--  <img id="hdr" src="images/spheric.jpg"> -->
     </a-assets>
     
-    <a-assets id="texture" 
+    <a-assets id="bricksTexture" 
               src="https://raw.githubusercontent.com/landev74/hotspot_demo/master/images/bricks.jpg">
     </a-assets>
     
      <a-assets id="normalTexture" 
               src="https://github.com/landev74/hotspot_demo/blob/master/images/bricks-NRM.jpg">
     </a-assets>
+    
+    <a-assets id="metalTexture" 
+              src="https://raw.githubusercontent.com/landev74/hotspot_demo/master/images/metal.jpg">
+    </a-assets>
+    
     
     <a-assets id="vidtexture" 
               src="https://download-a.akamaihd.net/files/media_periodical/01/jwbcov_I_201905_23_r720P.mp4">
@@ -37,8 +42,7 @@
     
     <a-sky src="#hdr" rotation="0 -130 0"></a-sky>
     
-    <a-box  src="#texture" 
-           normal-map="#normalTexture";
+    <a-box  src="#metalTexture" 
            position="0 0 -11"
            animation="property: position; 
                       to: 1 8 -10; dur: 2000; 
@@ -62,7 +66,12 @@
             rotation="0 90 0">
     </a-text>
     
-    <a-plane src="#vidtexture" position="-15 0 -15" width="16" height="9"></a-plane>
+    <a-plane src="#bricksTexture" 
+             position="-15 0 -15" 
+             width="16" 
+             height="9"
+             normal-map="#normalTexture">
+    </a-plane>
     
   </a-scene>
 </body>
