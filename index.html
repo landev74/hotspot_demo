@@ -73,6 +73,19 @@
              normal-map="#normalTexture">
     </a-plane>
     
+      <a-assets>
+          <img  id="ground" src="images\textures\floor.tif" alt="">
+          <img id="normal" src="images\textures\floor-NRM.tif" alt="">
+        </a-assets>
+        <a-plane
+        rotation="-90 0 0"
+        scale="10 10 1"
+        material="color: #FFFFFF;
+                  repeat: 5 5;
+                  src: #ground">
+
+        </a-plane>
+    
   </a-scene>
 </body>
 
